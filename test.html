@@ -13,6 +13,10 @@
     <input type="text" id="lname" name="lname" />
     <button id="button" onclick="clickArrowFunction()">Test</button>
     <script>
+      let person = {
+        firstName: '',
+        lastName: '',
+      };
       const button = document.getElementById('button');
       console.log(button.innerHTML);
       button.innerHTML = 'abc';
@@ -30,6 +34,15 @@
       }
       const clickArrowFunction = () => {
         console.log('button clicked');
+        //assign value to one key value pair
+        //person.firstName = document.getElementById('fname').value;
+        //person.lastName = document.getElementById('lname').value;
+        //add value to object
+        person = {
+          firstName: document.getElementById('fname').value,
+          lastName: document.getElementById('lname').value,
+        };
+        console.log(person);
       };
       /*
       button.addEventListener('click', clickFunction);
