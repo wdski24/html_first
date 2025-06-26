@@ -39,6 +39,9 @@
         //person.lastName = document.getElementById('lname').value;
         //add value to object
         person = {
+          //Object Destruction -> kopiert alle Key-Value Paare in das neue object
+          ...person,
+          //überschreibt die gewünschten key-value paare oder fügt neue hinzu
           firstName: document.getElementById('fname').value,
           lastName: document.getElementById('lname').value,
         };
